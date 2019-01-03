@@ -1,0 +1,142 @@
+
+*, body {
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
+
+body{
+    background-image: linear-gradient(to right, white 0%, beige 51%,white 100%);
+    }
+    .containter{
+        width:100%;
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        opacity:0.99
+    }
+
+    h1{
+        font-size:30px;
+        font-family: 'Source Code Pro', monospace;
+        color:#000034; 
+    }
+    .pictures {
+        height:706px;
+        width:1066px;
+        border:5px solid white;
+        border-radius: 15px; 
+        box-shadow:1px 1px 4px 1px rgba(0,0,0,0.3);
+        overflow:hidden;
+        position:relative;
+        background-color:black;
+        z-index:-10}
+        .pictures:hover .slide{
+            animation-play-state:paused
+        }
+        .pictures:hover .slide .line{
+            animation-play-state:paused
+        }
+        .slide{
+            height:320px;
+            width:100%;
+            position:absolute;
+            top:-320px;
+            opacity:0;
+            animation:slide 15s infinite
+        }
+        .bcg::after{
+            content:attr(name);
+            width:250px;
+            height:35px;
+            position:absolute;
+            bottom:15px;
+            left:-310px;
+            padding:15px;
+            font-size:30px;
+            letter-spacing:1.7px;
+            line-height:35px;
+            color:white;
+            background-color:rgba(0,0,0,0.5)
+        }
+        .slide:hover.bcg::after{
+            transform:translateX(310px);
+            transition-duration:0.2s;
+            transition-timing-function:ease-in
+        }
+        .line{
+            width:1066px; 
+            height:12px;
+            background-color:rgba(0,0,0,0.7);
+            position:absolute;
+            /* top:314px; */
+            left:0;
+            z-index:7;
+            animation:line 3s ease-out  infinite
+        }
+        .jaffa{
+            animation-delay:3s
+        }
+        .beach{
+            animation-delay:6s
+        }
+        .carmel{
+            animation-delay:9s
+        }
+        .old-jaffa{
+            animation-delay:12s
+        }
+        .kerem {
+            animation-delay:15s
+        }
+        .caffe {
+            animation-delay:18s
+        }
+        @keyframes line{
+            0% {
+                width: 0px;
+                background-color: rgba(0,0,0,0.0);
+            }
+            100% {
+                background-color: rgba(0,0,0,0.8);
+            }
+        }
+        
+        @keyframes slide {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+                z-index: -5;
+            }
+            6.66% {
+                z-index: 5;
+                transform: translateY(320px);
+                opacity: 1;
+            }
+            13.32% {
+                z-index: 5;
+                transform: translateY(320px);
+                opacity: 1;
+                
+            }
+            19.98% {
+                z-index: 5;
+                transform: translateY(320px);
+                opacity: 1;
+                
+            }
+            26.64% {
+                transform: translateY(640px);
+                opacity: 0;
+                z-index: -5;
+            }
+        
+            100% {
+                transform: translate(0,0);
+                opacity: 0;
+                z-index: -5;
+            }
+        }
+                                                    
+                                                    
+        
