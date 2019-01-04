@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
 
 body{
-    background-image: linear-gradient(to right, white 0%, beige 51%,white 100%);
+    background-image: linear-gradient(to right, white 0%,beige 51%,white 100%);
     }
     .containter{
         width:100%;
@@ -13,7 +13,7 @@ body{
         display:flex;
         flex-direction:column;
         align-items:center;
-        opacity:0.99
+        opacity:0.99;
     }
 
     h1{
@@ -38,12 +38,12 @@ body{
             animation-play-state:paused
         }
         .slide{
-            height:320px;
+            height:709px;
             width:100%;
             position:absolute;
             top:-320px;
             opacity:0;
-            animation:slide 15s infinite
+            animation:slide 15s infinite;
         }
         .bcg::after{
             content:attr(name);
@@ -62,14 +62,13 @@ body{
         .slide:hover.bcg::after{
             transform:translateX(310px);
             transition-duration:0.2s;
-            transition-timing-function:ease-in
+            transition-timing-function:steps(5);
         }
         .line{
             width:1066px; 
             height:12px;
             background-color:rgba(0,0,0,0.7);
             position:absolute;
-            /* top:314px; */
             left:0;
             z-index:7;
             animation:line 3s ease-out  infinite
@@ -91,6 +90,9 @@ body{
         }
         .caffe {
             animation-delay:18s
+        }
+        .azrieli {
+            animation-delay: 21s
         }
         @keyframes line{
             0% {
@@ -126,7 +128,7 @@ body{
                 
             }
             26.64% {
-                transform: translateY(640px);
+                transform: translateY(320px);
                 opacity: 0;
                 z-index: -5;
             }
