@@ -1,7 +1,4 @@
 
-*, body {
-    box-sizing: border-box;
-}
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
 
 body{
@@ -21,24 +18,25 @@ body{
         font-family: 'Source Code Pro', monospace;
         color:#000034; 
     }
-    .pictures {
-        height:706px;
-        width:1066px;
-        border:5px solid white;
-        border-radius: 15px; 
-        box-shadow:1px 1px 4px 1px rgba(0,0,0,0.3);
+    .photos {
+        height:560px;
+        width:770px;
+        border:1px solid white;
+        border-radius: 20px; 
+        box-shadow:1px 1px 4px 1px rgba(0,0,0,0.5);
         overflow:hidden;
         position:relative;
-        background-color:black;
-        z-index:-10}
-        .pictures:hover .slide{
+        /* background-color:black; */
+        z-index:-10;
+    }
+        .photos:hover .slide{
             animation-play-state:paused
         }
-        .pictures:hover .slide .line{
+        .photos:hover .slide .line{
             animation-play-state:paused
         }
         .slide{
-            height:709px;
+            height:540px;
             width:100%;
             position:absolute;
             top:-320px;
@@ -46,52 +44,53 @@ body{
             animation:slide 15s infinite;
         }
         .bcg::after{
-            content:attr(name);
-            width:250px;
-            height:35px;
-            position:absolute;
-            bottom:15px;
-            left:-310px;
-            padding:15px;
-            font-size:30px;
-            letter-spacing:1.7px;
-            line-height:35px;
-            color:white;
-            background-color:rgba(0,0,0,0.5)
+            content: attr(name);
+            width: 250px;
+            height: 35px;
+            position: absolute;
+            bottom: 15px;
+            left: -310px;
+            padding: 15px;
+            font-size: 30px;
+            letter-spacing: 1.7px;
+            line-height: 35px;
+            color: white;
+            background-color: rgba(0,0,0,0.5);
         }
         .slide:hover.bcg::after{
             transform:translateX(310px);
             transition-duration:0.2s;
-            transition-timing-function:steps(5);
+            transition-timing-function:ease-in
         }
         .line{
-            width:1066px; 
+            top: 0px; 
+            width:770px; 
             height:12px;
             background-color:rgba(0,0,0,0.7);
             position:absolute;
-            left:0;
+            right:0;
             z-index:7;
-            animation:line 3s ease-out  infinite
-        }
-        .jaffa{
-            animation-delay:3s
+            animation:line 3s ease-out infinite
         }
         .beach{
+            animation-delay:3s
+        }
+        .azrieli{
             animation-delay:6s
         }
-        .carmel{
+        .jaffaport{
             animation-delay:9s
         }
-        .old-jaffa{
+        .winter {
             animation-delay:12s
         }
         .kerem {
             animation-delay:15s
         }
-        .caffe {
-            animation-delay:18s
+        .dizingoff {
+            animation-delay: 18s
         }
-        .azrieli {
+        .old-city {
             animation-delay: 21s
         }
         @keyframes line{
@@ -106,29 +105,39 @@ body{
         
         @keyframes slide {
             0% {
-                transform: translateY(0);
+                transform: translateY(0px);
                 opacity: 0;
                 z-index: -5;
             }
             6.66% {
-                z-index: 5;
                 transform: translateY(320px);
                 opacity: 1;
+                z-index: 5;
             }
             13.32% {
-                z-index: 5;
                 transform: translateY(320px);
                 opacity: 1;
+                z-index: 5;
                 
             }
             19.98% {
-                z-index: 5;
                 transform: translateY(320px);
                 opacity: 1;
+                z-index: 5;
                 
             }
             26.64% {
                 transform: translateY(320px);
+                opacity: 0;
+                z-index: 5;
+            }
+            33.26% {
+                transform: translateY(640px);
+                opacity: 0;
+                z-index:5;
+            }
+            39.92% {
+                transform: translateY(0px);
                 opacity: 0;
                 z-index: -5;
             }
