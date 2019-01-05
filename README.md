@@ -1,1 +1,1 @@
-# css-slider 🙅🍻💥
+# css-slider 🙅🍻💥 - Animation Exercise
