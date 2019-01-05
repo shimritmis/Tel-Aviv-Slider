@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
 
 body{
-    background-image: linear-gradient(to right, white 0%,beige 51%,white 100%);
+    background-image: linear-gradient(to right, white 0%, beige 51%,white 100%);
     }
     .containter{
         width:100%;
@@ -14,7 +14,7 @@ body{
     }
 
     h1{
-        font-size:30px;
+        font-size:22px;
         font-family: 'Source Code Pro', monospace;
         color:#000034; 
     }
@@ -26,7 +26,6 @@ body{
         box-shadow:1px 1px 4px 1px rgba(0,0,0,0.5);
         overflow:hidden;
         position:relative;
-        /* background-color:black; */
         z-index:-10;
     }
         .photos:hover .slide{
@@ -59,7 +58,7 @@ body{
         }
         .slide:hover.bcg::after{
             transform:translateX(310px);
-            transition-duration:0.2s;
+            transition-duration:2s;
             transition-timing-function:ease-in
         }
         .line{
@@ -70,28 +69,22 @@ body{
             position:absolute;
             right:0;
             z-index:7;
-            animation:line 3s ease-out infinite
+            animation:line 3s ease-out infinite; 
         }
-        .beach{
+        .beach {
+            animation-delay:0s
+        }
+        .jaffaport {
             animation-delay:3s
         }
-        .azrieli{
+        .kerem {
             animation-delay:6s
         }
-        .jaffaport{
-            animation-delay:9s
-        }
-        .winter {
-            animation-delay:12s
-        }
-        .kerem {
-            animation-delay:15s
-        }
         .dizingoff {
-            animation-delay: 18s
+            animation-delay: 9s
         }
         .old-city {
-            animation-delay: 21s
+            animation-delay: 12s
         }
         @keyframes line{
             0% {
@@ -131,17 +124,6 @@ body{
                 opacity: 0;
                 z-index: 5;
             }
-            33.26% {
-                transform: translateY(640px);
-                opacity: 0;
-                z-index:5;
-            }
-            39.92% {
-                transform: translateY(0px);
-                opacity: 0;
-                z-index: -5;
-            }
-        
             100% {
                 transform: translate(0,0);
                 opacity: 0;
